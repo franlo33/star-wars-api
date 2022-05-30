@@ -1,43 +1,23 @@
-import React,{ useState } from 'react';
+import React,{ useState, useEffect } from 'react';
 import '../hojas-de-estilo/Header.css';
 
-function Categories({fetchPersonajes}) {
+function Categories({fetchPersonajesConFiltro,filtro,setFiltro }) {
 
-    const onClick = async (e) =>{
+    const onClick = (e) =>{
         e.preventDefault();
-        switch (e.target.value) {
-            // case "films":
-            //     await fetchPeliculas();
-            //     break;
-            case "people":
-                await fetchPersonajes();
-                break;
-            // case "planets":
-            //     await fetchPlanetas();
-            //     break;
-            // case "species":
-            //     await fetchEspecies();
-            //     break;
-            // case "starships":
-            //     await fetchNaves();
-            //     break;
-            // case "vehicles":
-            //     await fetchVehiculos();
-            //     break;
-            default:
-                console.log("HOLA MUNDO");
-                break;
-        }
+        setFiltro(e.target.value);
     }
+
+    
 
     return(
         <div className='categories-container'>
-            <button onClick={onClick} value="films">Películas</button>  
-            <button onClick={onClick} value="people">Personajes</button> 
-            <button onClick={onClick} value="planets">Planetas</button> 
-            <button onClick={onClick} value="species">Especies</button> 
-            <button onClick={onClick} value="starships">Naves</button> 
-            <button onClick={onClick} value="vehicles">vehículos</button>   
+            <button onClick={onClick} value="blond">Rubio</button>  
+            <button onClick={onClick} value="n/a">N/A</button> 
+            <button onClick={onClick} value="none">Sin pelo</button> 
+            <button onClick={onClick} value="black">Moreno</button> 
+            <button onClick={onClick} value="brown">Castaño</button> 
+            <button onClick={onClick} value="white">Blanco</button>   
         </div>
     )
 }

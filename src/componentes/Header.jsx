@@ -4,7 +4,7 @@ import Searchbar from './Searchbar';
 import Categories from './Categories';
 import Paginacion from './Paginacion';
 
-function Header({ onSearch, fetchPersonajes, pagina, setPagina, total }) {
+function Header({ onSearch, fetchPersonajes, pagina, setPagina, total, filtro, setFiltro, fetchPersonajesConFiltro }) {
 
     return(
         <header id='header' className='container'>
@@ -15,7 +15,7 @@ function Header({ onSearch, fetchPersonajes, pagina, setPagina, total }) {
             <div className='header-searchbar'>
                 <Searchbar onSearch={onSearch}/>
             </div>
-            <Categories fetchPersonajes={fetchPersonajes} />
+            <Categories fetchPersonajes={fetchPersonajes} filtro={filtro} setFiltro={setFiltro} fetchPersonajesConFiltro={fetchPersonajesConFiltro} />
             <Paginacion pagina={pagina} setPagina={setPagina} total={total} />
         </header>
     )
