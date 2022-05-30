@@ -38,7 +38,7 @@ function App() {
 
       setPersonajes(filtrado);
 
-      setPagina(0);
+      setPagina(1);
       setTotal(1);
     } catch (error) {
       
@@ -50,10 +50,6 @@ function App() {
       fetchPersonajes();
     } 
     }, [pagina]);
-
-    useEffect(() => {
-            fetchPersonajesConFiltro();
-        }, [filtro]);
 
   const onSearch = async (personaje) => {
     if(!personaje){

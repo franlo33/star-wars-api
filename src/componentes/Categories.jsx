@@ -3,12 +3,18 @@ import '../hojas-de-estilo/Header.css';
 
 function Categories({fetchPersonajesConFiltro,filtro,setFiltro }) {
 
+    const [cambiado,setCambiado] = useState ();
+
     const onClick = (e) =>{
         e.preventDefault();
         setFiltro(e.target.value);
+        setCambiado(e.target.value);
     }
 
-    
+    useEffect(() => {
+          fetchPersonajesConFiltro();
+        
+        }, [cambiado]);
 
     return(
         <div className='categories-container'>
