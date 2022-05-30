@@ -1,3 +1,7 @@
+## Para ver la app on line desde Vercel:
+
+https://star-wars-api-wheat.vercel.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
