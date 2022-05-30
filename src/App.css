@@ -1,0 +1,87 @@
+/* VARIABLES */
+:root{
+  --blanco:#F8F9FA;
+  --negro:#343A40;
+  --dorado: #EFC141;
+}
+
+@font-face {
+  font-family: Starjedi;
+  src: url('./fuentes/Starjedi.ttf');
+}
+
+/* RESETEO */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+html,body{
+  font-size: 14px;
+  background: url("./imagenes/fondo.webp") no-repeat center center / cover;
+  line-height: 1.6;
+  min-height: 100vh;
+  /* font-family: Starjedi, sans-serif; */
+  color: white;
+}
+
+@media only screen and (max-width:768px){
+  html,body{
+      font-size: 16px;
+  }
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.d-none{
+  display: none;
+}
+
+main{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgb(52, 58, 64,.8);
+  padding: 2em 1.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.img-izq{
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: 0;
+  left: 25px;
+}
+
+.img-der{
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  bottom: 0;
+  right: 25px;
+}
+
+@media only screen and (max-width:689px){
+  .img-der,.img-izq{
+      display: none;
+  }
+}

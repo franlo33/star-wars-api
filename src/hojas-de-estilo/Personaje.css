@@ -1,0 +1,59 @@
+.personaje-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    max-width: 200px;
+    height: 300px;
+    background-color: black;
+    box-shadow: 5px 5px 10px 2px #9ff0fd;
+    transition: all 300ms ease-in-out;
+    padding: 1em;
+}
+
+.personaje-container:hover{
+    box-shadow: 5px 5px 15px 5px #9ff0fd;
+}
+
+.personaje-imagen{
+    flex-grow: 1;
+    max-height: 50%;
+    margin-top: 1em;
+}
+
+.personaje-imagen img{
+    height: 100%;
+}
+
+.personaje-container h3{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    text-align: center;
+    padding: .5em;
+    letter-spacing: .1em;
+    font-size: 1em;
+}
+
+.personaje-container button{
+    font-family: Starjedi, sans-serif;
+    font-size: .7em;
+    padding:  .5em;
+    cursor: pointer;
+    transform: scale(1);
+    border: 2px solid var(--dorado);
+    background-color: var(--dorado);
+    color: #3c3c3c;
+    transition: all 300ms ease-in-out;
+    /* width: 85px; */
+}
+
+.personaje-container button:hover{
+    border: 2px solid var(--dorado);
+    background-color: #3c3c3c;
+    color: var(--dorado);
+    transform: scale(1.1);
+}
